@@ -37,7 +37,9 @@ El objetivo es simple: **compartir, conectar y crear tu karma digital**.
 Autor
 
 Emiliano Cabella
+
 GitHub: @Duukio
+
 Twitter/X: @DuukioAR
 
 
