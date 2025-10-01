@@ -34,9 +34,19 @@ El objetivo es simple: **compartir, conectar y crear tu karma digital**.
 - [Lucide Icons](https://lucide.dev/)
 
 ---
-Autor
+## ⏱️ Tiempo de desarrollo
 
-Emiliano Cabella
+Karmic fue desarrollado en **5 días**:  
+- 📅 Inicio: **27 de septiembre de 2025**  
+- ✅ Finalizado (MVP): **1 de octubre de 2025**  
+
+Este timeframe refleja la rapidez y eficiencia en el uso de tecnologías modernas como Next.js 14, Prisma y Clerk.
+---
+
+---
+##Autor
+
+*Emiliano Cabella*
 
 GitHub: @Duukio
 
