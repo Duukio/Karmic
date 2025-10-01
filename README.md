@@ -44,7 +44,7 @@ Este timeframe refleja la rapidez y eficiencia en el uso de tecnologías moderna
 ---
 
 ---
-## Autor
+ **Autor**
 
 *Emiliano Cabella*
 
