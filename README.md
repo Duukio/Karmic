@@ -33,7 +33,7 @@ El objetivo es simple: **compartir, conectar y crear tu karma digital**.
 - [shadcn/ui](https://ui.shadcn.com/)
 - [Lucide Icons](https://lucide.dev/)
 
-
+---
 Autor
 
 Emiliano Cabella
