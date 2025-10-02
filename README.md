@@ -3,7 +3,7 @@
 **Karmic** es una red social moderna inspirada en **Twitter**, construida con el stack más reciente de **Next.js 14, Prisma y Clerk**.  
 El objetivo es simple: **compartir, conectar y crear tu karma digital**.  
 
-🔗 [Demo en Vercel](https://karmic.es)  
+🔗 [Link a la Página](https://karmic.es)  
 
 ---
 
