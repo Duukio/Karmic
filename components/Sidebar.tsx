@@ -1,27 +1,23 @@
-import { currentUser } from "@clerk/nextjs/server"
+import { currentUser } from "@clerk/nextjs/server";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { Button } from "./ui/button";
 import { SignInButton, SignUpButton } from "@clerk/nextjs";
+import { Button } from "./ui/button";
 import { getUserbyClerkId } from "@/actions/user.action";
-import { use } from "react";
 import Link from "next/link";
+import { Avatar, AvatarImage } from "./ui/avatar";
+import { Separator } from "./ui/separator";
 import { LinkIcon, MapPinIcon } from "lucide-react";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { Separator } from "@radix-ui/react-separator";
 
 async function Sidebar() {
-    const authUser = await currentUser();
-    if (!authUser) return <UnAuthenticatedSidebar />;
+  const authUser = await currentUser();
+  if (!authUser) return <UnAuthenticatedSidebar />;
 
-    const user = await getUserbyClerkId(authUser.id);
-    if(!user) return null;
+  const user = await getUserbyClerkId(authUser.id);
+  if (!user) return null;
 
-
-   console.log({user});
-
-  return ( 
-  <div className="sticky top-20">
-       <Card>
+  return (
+    <div className="sticky top-20">
+      <Card>
         <CardContent className="pt-6">
           <div className="flex flex-col items-center text-center">
             <Link
@@ -78,11 +74,8 @@ async function Sidebar() {
     </div>
   );
 }
-  
-
 
 export default Sidebar;
-
 
 const UnAuthenticatedSidebar = () => (
   <div className="sticky top-20">
@@ -107,4 +100,4 @@ const UnAuthenticatedSidebar = () => (
       </CardContent>
     </Card>
   </div>
-); 
+);
