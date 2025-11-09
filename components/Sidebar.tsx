@@ -6,7 +6,7 @@ import { getUserbyClerkId } from "@/actions/user.action";
 import { use } from "react";
 import Link from "next/link";
 import { LinkIcon, MapPinIcon } from "lucide-react";
-import { Avatar, AvatarImage } from "@radix-ui/react-avatar";
+import { Avatar, AvatarImage } from "./ui/avatar";
 import { Separator } from "@radix-ui/react-separator";
 
 async function Sidebar() {
