@@ -20,7 +20,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Karmic",
-  description: "Powered by Next.JS",
+  description: "— Donde ves lo que querés ver",
 };
 
 export default function RootLayout({
