@@ -35,6 +35,7 @@ function ProfilePageClient({isFollowing:initialIsFollowing,likePosts,posts,user}
   const [showEditDialog, setShowEditDialog] = useState(false);
   const [isFollowing, setIsFollowing] = useState(initialIsFollowing);
   const [isUpdatingFollow, setIsUpdatingFollow] = useState(false);
+const {user: authUser} = useUser();
 
 
   const [editForm, setEditForm] = useState({
@@ -78,7 +79,6 @@ function ProfilePageClient({isFollowing:initialIsFollowing,likePosts,posts,user}
 
 
 const formattedDate = format(new Date(user.createdAt), "MMMM yyyy");
-
 
 
   return  ( <div className="max-w-3xl mx-auto">
