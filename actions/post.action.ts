@@ -37,7 +37,8 @@ export async function getPosts() {
                         id: true,
                         name: true,
                         image: true,
-                        username: true
+                        username: true,
+                        clerkId: true,
                     }
                 },
                 comments: {

@@ -6,7 +6,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { Card, CardContent } from "./ui/card";
 import Link from "next/link";
-import { Avatar, AvatarImage } from "./ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import {formatDistanceToNow} from "date-fns"
 import { DeleteAlertDialog } from "./ui/DeleteAlertDialog";
 import { Button } from "./ui/button";
@@ -77,8 +77,11 @@ function PostCard({ post, dbUserId }: { post: Post; dbUserId: string | null }) {
         <div className="space-y-4">
           <div className="flex space-x-3 sm:space-x-4">
             <Link href={`/profile/${post.author.username}`}>
-              <Avatar className="size-8 sm:w-10 sm:h-10">
-                <AvatarImage src={post.author.image ?? "/avatar.png"} />
+              <Avatar className="size-10 flex-shrink-0">
+                
+                <AvatarFallback>
+                <img src="/avatar.png" className="w-full h-full object-cover" />
+                </AvatarFallback>
               </Avatar>
             </Link>
 
@@ -160,7 +163,12 @@ function PostCard({ post, dbUserId }: { post: Post; dbUserId: string | null }) {
                 {post.comments.map((comment) => (
                   <div key={comment.id} className="flex space-x-3">
                     <Avatar className="size-8 flex-shrink-0">
-                      <AvatarImage src={comment.author.image ?? "/avatar.png"} />
+                  <Avatar className="size-8 flex-shrink-0">
+                    <AvatarImage src={comment.author.id ? 
+                     `https://img.clerk.com/${comment.author.id}` : 
+                     comment.author.image ?? "/avatar.png"}
+                    />
+                  </Avatar>
                     </Avatar>
                     <div className="flex-1 min-w-0">
                       <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
@@ -182,7 +190,10 @@ function PostCard({ post, dbUserId }: { post: Post; dbUserId: string | null }) {
               {user ? (
                 <div className="flex space-x-3">
                   <Avatar className="size-8 flex-shrink-0">
-                    <AvatarImage src={user?.imageUrl || "/avatar.png"} />
+                    <AvatarImage src={post.author.clerkId ? 
+                     `https://img.clerk.com/${post.author.clerkId}` : 
+                     post.author.image ?? "/avatar.png"}
+                    />
                   </Avatar>
                   <div className="flex-1">
                     <Textarea
