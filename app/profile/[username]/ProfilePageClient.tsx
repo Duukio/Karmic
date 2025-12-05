@@ -79,6 +79,8 @@ function ProfilePageClient({isFollowing:initialIsFollowing,likePosts,posts,user}
 
 const formattedDate = format(new Date(user.createdAt), "MMMM yyyy");
 
+
+
   return  ( <div className="max-w-3xl mx-auto">
       <div className="grid grid-cols-1 gap-6">
         <div className="w-full max-w-lg mx-auto">

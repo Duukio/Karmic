@@ -48,6 +48,7 @@ export async function getUserPosts(userId: string) {
             name: true,
             username: true,
             image: true,
+            clerkId: true,
           },
         },
         comments: {
@@ -58,6 +59,7 @@ export async function getUserPosts(userId: string) {
                 name: true,
                 username: true,
                 image: true,
+                clerkId: true,
               },
             },
           },
@@ -106,6 +108,7 @@ export async function getUserLikedPosts(userId: string) {
             name: true,
             username: true,
             image: true,
+            clerkId: true,
           },
         },
         comments: {
@@ -116,6 +119,7 @@ export async function getUserLikedPosts(userId: string) {
                 name: true,
                 username: true,
                 image: true,
+                clerkId: true,
               },
             },
           },
