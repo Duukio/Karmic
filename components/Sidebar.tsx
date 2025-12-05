@@ -4,7 +4,7 @@ import { SignInButton, SignUpButton } from "@clerk/nextjs";
 import { Button } from "./ui/button";
 import { getUserbyClerkId } from "@/actions/user.action";
 import Link from "next/link";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { Avatar, AvatarImage } from "./ui/avatar";
 import { Separator } from "./ui/separator";
 import { LinkIcon, MapPinIcon } from "lucide-react";
 
@@ -12,7 +12,7 @@ async function Sidebar() {
   const authUser = await currentUser();
   if (!authUser) return <UnAuthenticatedSidebar />;
 
-  const user = await getUserbyClerkId(authUser.id);
+  const user = await getUserByClerkId(authUser.id);
   if (!user) return null;
 
   return (
@@ -25,7 +25,7 @@ async function Sidebar() {
               className="flex flex-col items-center justify-center"
             >
               <Avatar className="w-20 h-20 border-2 ">
-              <AvatarImage src={user.image || authUser?.imageUrl || "/avatar.png"} />
+                <AvatarImage src={user.image || "/avatar.png"} />
               </Avatar>
 
               <div className="mt-4 space-y-1">
